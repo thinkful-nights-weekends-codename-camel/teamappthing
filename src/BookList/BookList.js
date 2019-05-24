@@ -8,10 +8,12 @@ export default class BookList extends Component {
     }
 
     render() {
+        //console.log(this.props.books)
         return (
             <ul>
                 <li>
-                    <Book />
+                    {this.props.books[0].title}
+                    {/* <Book /> */}
                 </li>
             </ul>   
         )
