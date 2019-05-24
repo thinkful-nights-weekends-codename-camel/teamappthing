@@ -2,6 +2,10 @@ import React, { Component} from 'react';
 
 
 export default class SearchForm extends Component {
+  static defaultProps = {
+      onSubmit: ()=>{},
+      searchBoxChanged: ()=>{}
+  }
  
   render() {
     return(
@@ -13,9 +17,15 @@ export default class SearchForm extends Component {
                     name="search"
                     id="search"
                     placeholder="peter rabbit"  // put value and onClick or whatever here
+                    onChange={e => this.props.searchBoxChanged(e.target.value)}
                     >
                 </input>
-                <button type="submit">Search</button>
+                <button type="submit"
+                onClick={e => {
+                    e.preventDefault();
+                    this.props.onSubmit();
+                }
+                }>Search</button>
 
                 <label htmlFor="printType">Print Type:</label>
                 <select

@@ -1,0 +1,23 @@
+.book-item {
+    display: flex;
+    margin-bottom: 18px;
+}
+
+.book-text h3,
+.book-text h4 {
+    margin: 2px 0 6px;
+}
+
+.book-text p {
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
+
+.thumbnail-cont {
+    margin-right: 24px;
+    width: 80px;
+}
+
+.thumbnail-cont img {
+    width: 100%;
+}

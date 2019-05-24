@@ -8,13 +8,16 @@ export default class BookList extends Component {
     }
 
     render() {
-        //console.log(this.props.books)
-        return (
-            <ul>
-                <li>
-                    {/* <Book /> */}
-                </li>
-            </ul>   
-        )
+        let { books } = this.props;
+        if(books.length > 0) {
+            return (
+                <ul>
+                    {books.map(bookDetails=><Book key={bookDetails.id} details={bookDetails} />)}
+                </ul>
+            )
+        }
+        if(books.length === 0) {
+            return <h5>No books found :(</h5>
+        }
     }
 }
