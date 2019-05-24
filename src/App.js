@@ -17,7 +17,7 @@ export default class App extends Component {
   }
 
   bookSearch(searchTerm) {
-    let booksArray = fetch(`https://www.googleapis.com/books/v1/volumes?q=${searchTerm}`)
+    fetch(`https://www.googleapis.com/books/v1/volumes?q=${searchTerm}`)
     .then(function(response) {
       return response.json();
     })
@@ -31,14 +31,12 @@ export default class App extends Component {
           imgurl: item.volumeInfo.imageLinks.smallThumbnail,
         }
       });
-      // arr.forEach(book => {
-      //   console.log(book.title);
-      // });
       return arr;
     })
-    this.setState({
-      booksArray: booksArray
-    })
+    // this.setState({
+    //   booksArray: booksArray
+    // })
+    // console.log(this.state);
   }
 
   render() {
