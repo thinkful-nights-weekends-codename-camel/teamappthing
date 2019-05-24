@@ -31,14 +31,20 @@ export default class SearchForm extends Component {
                 <select
                     id="printType"
                     name="printType">
-                <option value="None">All</option>
+                <option value="all">All</option>
+                <option value="books">Books</option>
+                <option value="magazines">Magazines</option>
                 </select>
                 
                 <label htmlFor="filter">Book Type:</label>
                 <select
                     id="filter"
                     name="filter">
-                <option value="None">No Filter</option>
+                <option value="partial">partial</option>
+                <option value="full">Full</option>
+                <option value="free">Free e-books</option>
+                <option value="paid">Paid e-books</option>
+                <option value="ebooks">Any e-books</option>
                 </select>
             </form>
         </div>
