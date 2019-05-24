@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class Book extends Component() {
+export default class Book extends Component {
     static defaultProps = {
         title: 'title',
         subtitle: '',
@@ -12,11 +12,11 @@ export default class Book extends Component() {
     render() {
         return (
             <div>
-                {/* {this.props.title}
+                {this.props.title}
                 {this.props.subtitle}
                 {this.props.authors}
                 {this.props.listprice}
-                {this.props.imgurl} */}
+                {this.props.imgurl}
             </div>   
         )
     }

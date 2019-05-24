@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Book from '../Book/Book';
 
 
-export default class BookList extends Component() {
+export default class BookList extends Component {
     static defaultProps = {
         books: []
     }
@@ -11,7 +11,7 @@ export default class BookList extends Component() {
         return (
             <ul>
                 <li>
-                    <Book/>
+                    <Book />
                 </li>
             </ul>   
         )
